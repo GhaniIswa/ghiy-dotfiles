@@ -13,6 +13,7 @@ My larping arch linux dotfiles.
 - mpv
 - mangohud
 - yazi
+- starship
 
 # My custom script.
 Simple script which is music play on terminal, and stream using youtube links. (probably more in the future)
