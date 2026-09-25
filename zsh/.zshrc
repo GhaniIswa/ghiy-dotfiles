@@ -28,3 +28,8 @@ if [[ -n "$KITTY_INSTALLATION_DIR" ]]; then
     source "$KITTY_INSTALLATION_DIR/shell-integration/zsh/kitty-integration"
 fi
 
+precmd() {
+  precmd() {
+    echo
+  }
+}
