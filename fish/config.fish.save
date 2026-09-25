@@ -1,9 +1,0 @@
-if status is-interactive
-end
-set fish_greeting ""
-function fish_right_prompt; 
-end
-if not contains ~/.local/bin/ $PATH
-    set -p PATH ~/.local/bin/
-end
-set -g fish_color_
