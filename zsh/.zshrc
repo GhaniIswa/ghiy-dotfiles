@@ -21,3 +21,10 @@ setopt hist_ignore_space
 ##  zsh syntax conf
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[command]='fg=white'
+
+## shell integration
+if [[ -n "$KITTY_INSTALLATION_DIR" ]]; then
+    export KITTY_SHELL_INTEGRATION="enabled no-cursor"
+    source "$KITTY_INSTALLATION_DIR/shell-integration/zsh/kitty-integration"
+fi
+
