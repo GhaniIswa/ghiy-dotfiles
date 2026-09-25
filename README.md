@@ -15,7 +15,7 @@ My larping arch linux dotfiles.
 - starship
 - zsh
 
-remember to add `export ZDOTDIR="$HOME/.config/zsh"` to your /etc/zsh/zshenv
+remember to add `export ZDOTDIR="$HOME/.config/zsh"` to your `/etc/zsh/zshenv`
 
 # My custom script.
 Simple script which is music play on terminal, and stream using youtube links. (probably more in the future)
