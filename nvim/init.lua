@@ -1,0 +1,7 @@
+require("config.options")
+require("config.keymaps")
+require("config.lspcomp")
+require("config.filetab")
+require("config.theme")
+require("config.greeter")
+require("config.telescope")

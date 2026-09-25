@@ -1,0 +1,125 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "spacing": 4,
+    "width": 1876,
+    "margin-top": 8,
+    "margin-left": 22,
+    "margin-right": 22,
+    "margin-bottom": -8,
+//    "exclusive": true,
+//   "gtk-layer-shell": true,
+
+    "modules-left": [
+        "clock",
+        "hyprland/workspaces",
+        "memory"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "custom/nowplaying",
+        "tray",
+        "network",
+        "pulseaudio",
+        "backlight",
+        "battery"
+    ],
+
+    // --- Modul ---
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"e+1\"})' ",
+        "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace=\"e-1\"})' ",
+        "format": "{icon}",
+        "sort-by": "id",
+        "format-icons": {
+            "Gaming": "G",
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4"
+        }
+    },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 82,
+        "separate-outputs": true,
+        "rewrite": {
+            "": "be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind."
+        }
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "RAM {used:0.1f} GB / {total:0.1f} GB",
+        "format-alt": "󰍛 {}%",
+        "max-length": 50
+
+    },
+
+    "network": {
+        "format-wifi": " ",
+        "format-alt": "{essid}",
+        "format-disconnected": "X",
+        "max-length": 20,
+        "tooltip": false
+    },
+
+    "backlight": {
+        "format": "{icon}  {percent}%",
+        "format-icons": ["󰃞 ", "󰃟 ", "󰃠 "],
+        "on-scroll-up": "brightnessctl set 5%+",
+        "on-scroll-down": "brightnessctl set 5%-",
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%Y-%m-%d}",
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟  Muted",
+        "format-icons": {
+        "headphone": "󰋋 ",
+        "hands-free": "󰋋 ",
+        "headset": "󰋋 ",
+        "phone": "󰏲",
+        "portable": "󰏲",
+        "car": "󰆋",
+        "default": ["󰕿 ", "󰖀 ", "󰕾 "]
+        },
+        "on-click": "pavucontrol",
+        "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 10%+",
+        "on-scroll-down": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 10%-",
+        "tooltip": false
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15,
+            "full": 90
+        },
+        "format": "Batt: {capacity}%",
+        "format-full": "",
+        "format-charging": "󱐋 {capacity}%"
+    },
+
+    "custom/nowplaying": {
+        "format": "󰝚  {}",
+        "return-type": "json",
+        "max-length": 43,
+        "exec": "playerctl -a metadata --format '{\"text\": \"{{title}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    }
+}

@@ -1,0 +1,31 @@
+#!/usr/bin/env fish
+
+if test (count $argv) -eq 0
+    echo "Usage: music <song title / artist>"
+    exit 1
+end
+
+set QUERY "$argv"
+echo "Finding $QUERY song ..."
+
+set SELECTED (yt-dlp "ytsearch15:$QUERY" \
+    --print "%(title)s [%(id)s]" \
+    --no-playlist 2>/dev/null | fzf --prompt="Choose song > " --height=40% --reverse)
+
+if test -z "$SELECTED"
+    echo "Exit."
+    exit 0
+end
+
+set VIDEO_ID (string match -r '\[(.*)\]$' "$SELECTED")[2]
+
+if test -n "$VIDEO_ID"
+    echo "Starting song..."
+    
+    set PLAYLIST_URL "https://www.youtube.com/watch?v=$VIDEO_ID&list=RD$VIDEO_ID"
+    
+    mpv --no-video \
+        --ytdl-raw-options=yes-playlist= \
+        --loop-playlist=inf \
+        "$PLAYLIST_URL"
+end

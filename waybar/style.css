@@ -1,0 +1,108 @@
+* {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background-color: rgba(30, 30, 30, 0.00);
+    transition-property: background-color;
+    transition-duration: .2s;
+}
+
+#workspaces,
+#window,
+#clock,
+#cpu,
+#memory,
+#pulseaudio,
+#network,
+#backlight,
+#battery,
+#custom-nowplaying,
+#tray {
+    background: rgba(15, 15, 15, 0.50);
+    padding: 4px 12px;
+    margin: 2px 2px;
+    border-radius: 12px;
+    color: #d4d4d4;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#tray > .needs-attention {
+    background: rgba(243, 139, 168, 0.2);
+    border-radius: 8px;
+}
+
+#tray > widget > image {
+    padding: 0 5px;
+    margin: 2px 2px;
+}
+
+#tray > widget:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#workspaces button {
+    padding: 0 5px;
+    margin: 2px 2px;
+    color: #888888;
+    border-radius: 12px;
+    background: transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #d4d4d4;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#workspaces button.urgent {
+    color: #f38ba8;
+    background: rgba(243, 139, 168, 0.2);
+}
+
+#clock {
+    color: #d4d4d4;
+}
+
+#pulseaudio {
+    color: #d4d4d4;
+}
+
+#battery{
+    color: #d4d4d4;
+}
+
+#battery.charging{
+    color: #a6e3a1;
+}
+
+#battery.warning {
+    color: #fab387;
+}
+
+#battery.critical {
+    color: #f38ba8;
+}
+
+#custom-nowplaying.pause {
+    color: #6c7086; /* Warna jadi agak pudar kalau musiknya di-pause */
+}
