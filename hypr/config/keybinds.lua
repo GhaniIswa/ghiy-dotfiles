@@ -31,6 +31,8 @@ hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen
 
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+hl.bind(mainMod .. " + EQUAL", hl.dsp.window.resize({ x = 50, y = 0, relative = true}), { repeating = true })
+hl.bind(mainMod .. " + MINUS", hl.dsp.window.resize({ x = -50, y = 0, relative = true}), { repeating = true })
 
 -- Move Workspace 
 

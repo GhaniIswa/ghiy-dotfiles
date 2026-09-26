@@ -105,11 +105,9 @@
     "battery": {
         "states": {
             "warning": 30,
-            "critical": 15,
-            "full": 90
+            "critical": 15
         },
-        "format": "Batt: {capacity}%",
-        "format-full": "",
+        "format": "Battery: {capacity}%",
         "format-charging": "󱐋 {capacity}%"
     },
 
