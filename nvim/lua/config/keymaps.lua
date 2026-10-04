@@ -8,7 +8,7 @@ vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
 
 -- File Tree keymap
-vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { silent = true })
+vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle Neo-tree" })
 
 -- Buffer/Tab keymap
 vim.keymap.set('n', '<S-l>', ':BufferLineCycleNext<CR>', { silent = true })
