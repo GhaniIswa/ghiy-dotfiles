@@ -8,7 +8,6 @@ My larping arch linux dotfiles.
 - nvim
 - kitty
 - fastfetch
-- btop
 - mpv
 - mangohud
 - yazi
