@@ -14,13 +14,13 @@ dashboard.section.header.val = {
 }
 
 dashboard.section.buttons.val = {
-    dashboard.button("e", "📁  File Explorer", ":NvimTreeOpen<CR>"),
-    dashboard.button("f", "🔍  Find File", ":Telescope find_files<CR>"),
-    dashboard.button("r", "🕒  Recent Files", ":Telescope oldfiles<CR>"),
-    dashboard.button("s", "⚙️  Settings (init.lua)", ":e ~/.config/nvim/init.lua<CR>"),
-    dashboard.button("q", "🚪  Quit Neovim", ":qa<CR>"),
+    dashboard.button("e", "File Explorer", ":Neotree toggle<CR>"),
+    dashboard.button("f", "Find File", ":Telescope find_files<CR>"),
+    dashboard.button("r", "Recent Files", ":Telescope oldfiles<CR>"),
+    dashboard.button("s", "Settings (init.lua)", ":e ~/.config/nvim/init.lua<CR>"),
+    dashboard.button("q", "Quit Neovim", ":qa<CR>"),
 }
 
-dashboard.section.footer.val = "Neovim Editor Config Susah Hasil Josjis"
+dashboard.section.footer.val = "Neovim Editor"
 
 alpha.setup(dashboard.opts)
