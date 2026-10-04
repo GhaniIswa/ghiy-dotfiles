@@ -18,6 +18,9 @@ setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_ignore_space
 
+##
+export EDITOR="nvim"
+
 ##  zsh syntax conf
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[command]='fg=white'
