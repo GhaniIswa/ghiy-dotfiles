@@ -42,7 +42,7 @@ hl.window_rule({
     fullscreen_state = 0,
     workspace        = gamingWorkspace,
 })
-hl.window_rule({ match = { class = "^(RimWorldLinux|Minecraft.*)$"}, fullscreen = true, float = true, workspace = gamingWorkspace, })
+hl.window_rule({ match = { class = "^(Terraria.bin.x86_64|RimWorldLinux|Minecraft.*)$"}, fullscreen = true, float = true, workspace = gamingWorkspace, })
 
 -- Apps
 hl.window_rule({ match = { class = "^(.*[Ll]auncher.*)$" }, float = true, monitor = PRIMARY_MONITOR })
