@@ -16,6 +16,8 @@ My larping arch linux dotfiles.
 
 remember to add `export ZDOTDIR="$HOME/.config/zsh"` to your `/etc/zsh/zshenv`
 
+Warning! you need to edit monitors.lua beacause it was my monitors setting
+
 # My custom script.
 Simple script which is music play on terminal, and stream using youtube links. (probably more in the future)
 
