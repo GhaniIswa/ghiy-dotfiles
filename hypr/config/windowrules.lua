@@ -99,7 +99,7 @@ hl.window_rule({
 -- Fuzzel Blur
 hl.layer_rule({
     match = {
-        namespace = "launcher|waybar"
+        namespace = "launcher"
     },
     blur = true,
     ignore_alpha = 0.3,
