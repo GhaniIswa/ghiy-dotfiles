@@ -5,7 +5,8 @@
 }
 
 window#waybar {
-    background-color: rgba(30, 30, 30, 0.00);
+    border-radius: 12px;
+    background-color: rgba(15, 15, 15, 0.00);
     transition-property: background-color;
     transition-duration: .2s;
 }
@@ -28,7 +29,6 @@ window#waybar {
     color: #d4d4d4;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 #tray > .passive {
     -gtk-icon-effect: dim;
@@ -104,5 +104,5 @@ window#waybar {
 }
 
 #custom-nowplaying.pause {
-    color: #6c7086; /* Warna jadi agak pudar kalau musiknya di-pause */
+    color: #6c7086;
 }

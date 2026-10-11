@@ -46,12 +46,20 @@
 
     "hyprland/window": {
         "format": "{title}",
-        "max-length": 82,
+        "max-length": 50,
         "separate-outputs": true,
         "rewrite": {
             "": "Arch Linux"
         }
+    
     },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%Y-%m-%d}",
+        "tooltip": false
+    },
+
 
     "memory": {
         "interval": 30,
@@ -72,14 +80,8 @@
     "backlight": {
         "format": "{icon}  {percent}%",
         "format-icons": ["󰃞 ", "󰃟 ", "󰃠 "],
-        "on-scroll-up": "brightnessctl set 5%+",
-        "on-scroll-down": "brightnessctl set 5%-",
-        "tooltip": false
-    },
-
-    "clock": {
-        "format": "{:%H:%M}",
-        "format-alt": "{:%Y-%m-%d}",
+        "on-scroll-up": "brightnessctl set 1%+",
+        "on-scroll-down": "brightnessctl set 1%-",
         "tooltip": false
     },
 
@@ -96,8 +98,8 @@
         "default": ["󰕿 ", "󰖀 ", "󰕾 "]
         },
         "on-click": "pavucontrol",
-        "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 10%+",
-        "on-scroll-down": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 10%-",
+        "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-",
         "tooltip": false
     },
 
@@ -113,7 +115,7 @@
     "custom/nowplaying": {
         "format": "󰝚  {}",
         "return-type": "json",
-        "max-length": 43,
+        "max-length": 25,
         "exec": "playerctl -a metadata --format '{\"text\": \"{{title}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl next",
