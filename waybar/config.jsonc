@@ -1,7 +1,6 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 40,
     "spacing": 4,
     "margin-top": 8,
     "margin-left": 22,
@@ -64,7 +63,7 @@
     "memory": {
         "interval": 30,
         "format": "RAM {used:0.1f} GB / {total:0.1f} GB",
-        "format-alt": "󰍛 {}%",
+        "on-click": "btop",
         "max-length": 50
 
     },
