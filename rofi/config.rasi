@@ -1,0 +1,92 @@
+configuration {
+    modi:                       "drun,run,filebrowser";
+    font:                       "Inter 12";
+}
+
+* {
+    bg-main:                    #1f1f1f80;
+    bg-selected:                #2b2b2b80;
+    fg:                         #C4C4C4ff;
+    transparent:                transparent;
+    separatorcolor:		        transparent;
+}
+
+window {
+    transparency:               "real";
+    location:                   center;
+    anchor:                     center;
+    width:                      600px;
+    x-offset:                   0px;
+    y-offset:                   0px;
+    
+    background-color:           @bg-main;
+    border:                     0px;
+    border-color:               #89b4fa80;
+    border-radius:              12px;
+    padding:                    15px;
+}
+
+mainbox {
+    background-color:           @transparent;
+    children:                   [ "inputbar", "listview" ];
+    spacing:                    10px;
+}
+
+inputbar {
+    background-color:           @transparent;
+    children:                   [ "entry" ];
+}
+
+entry {
+    background-color:           #2b2b2b80;
+    text-color:                 @fg;
+    placeholder:                "Search...";
+    placeholder-color:          #c4c4c480;
+    padding:                    10px 15px;
+    border-radius:              8px;
+}
+
+listview {
+    background-color:           @transparent;
+    columns:                    1;
+    lines:                      8;
+    spacing:                    5px;
+    cycle:                      true;
+    dynamic:                    true;
+    scrollbar:                  false;
+    separator-style: 		"none";
+}
+
+element {
+    background-color:           @transparent;
+    text-color:                 @fg;
+    padding:                    8px 12px;
+    border-radius:              6px;
+    spacing:                    10px;
+}
+
+element normal.normal {
+    background-color: @transparent;
+    text-color: @foreground;
+}
+
+element alternate.normal {
+    background-color: @transparent;
+    text-color: @foreground;
+}
+
+element selected.normal {
+    background-color:           @bg-selected;
+    text-color:                 #C4C4C4;
+}
+
+element-text {
+    background-color:           @transparent;
+    text-color:                 #C4C4C4;
+    vertical-align:             0.5;
+}
+
+element-icon {
+    background-color:           @transparent;
+    size:                       24px;
+}
