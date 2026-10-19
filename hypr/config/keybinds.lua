@@ -4,9 +4,9 @@ local mainMod = "SUPER"
 
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("zen-browser")) 
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("firefox")) 
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" })) 
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("fuzzel")) 
+hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("rofi -show drun")) 
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo()) 
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 
