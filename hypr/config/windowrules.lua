@@ -13,41 +13,16 @@ hl.window_rule({
 -- Gaming
 local gamingApps = "^(steam_app.*|gamescope)$"
 local gamingWorkspace = "name:Gaming"
+local windowsWorkspace = "name:Windows"
 
 hl.window_rule({ match = { content = "game" }, workspace = gamingWorkspace })
 hl.window_rule({ match = { xdg_tag = "^(.*game.*)$" }, workspace = gamingWorkspace, fullscreen_state = 2, content = "game", sync_fullscreen = true })
 hl.window_rule({ match = { class = gamingApps }, workspace = gamingWorkspace })
 hl.window_rule({ match = { class = "^(steam)$", title = "^(Friends List)$" }, float = true })
 hl.window_rule({ match = { class = "^(steam)$", title = "^(Launching\\.{3})$" }, float = true, center = true, workspace = gamingWorkspace })
-hl.window_rule({
-    match = {
-        class         = gamingApps,
-        title         = "^(.+)$",
-        initial_title = "negative:^(.*\\\\home\\\\.*)$",
-    },
-    content          = "game",
-    decorate         = false,
-    fullscreen_state = 2,
-    size             = { "monitor_w", "monitor_h" },
-    sync_fullscreen  = true,
-})
-hl.window_rule({
-    match = {
-        class         = "^(steam_app.*)$",
-        initial_title = "^$",
-    },
-    center           = true,
-    float            = true,
-    fullscreen       = false,
-    fullscreen_state = 0,
-    workspace        = gamingWorkspace,
-})
-hl.window_rule({ match = { class = "^(Terraria.bin.x86_64|RimWorldLinux|Minecraft.*)$"}, fullscreen = true, float = true, workspace = gamingWorkspace, })
 
--- Apps
-hl.window_rule({ match = { class = "^(.*[Ll]auncher.*)$" }, float = true, monitor = PRIMARY_MONITOR })
-hl.window_rule({ match = { class = "^(vesktop|discord)$" }, monitor = PRIMARY_MONITOR })
-hl.window_rule({ match = { class = "^(dev\\.)?(noctalia\\.Noctalia(\\.Settings)?)$" }, float = true, size = { "monitor_w*0.70", "monitor_h*0.70" } })
+hl.window_rule({ match = { class = "^(Terraria.bin.x86_64|RimWorldLinux|Minecraft.*)$"}, fullscreen = true, float = true, workspace = gamingWorkspace })
+hl.window_rule({ match = { class = "^(VirtualBox Machine)$"}, fullscreen = true, float = true, workspace = windowsWorkspace })
 
 -- Opacity Overrides
 local terminals = "^(kitty)$"
