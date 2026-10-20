@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     "spacing": 2,
-    "margin-top": 8,
+    "margin-top": 14,
     "margin-left": 300,
     "margin-right": 300,
     "margin-bottom": -8,
@@ -14,8 +14,7 @@
         "clock"
     ],
     "modules-center": [
-        "hyprland/window",
-        "privacy"
+        "hyprland/window"
     ],
     "modules-right": [
         "custom/nowplaying",
@@ -35,6 +34,7 @@
         "format": "{icon}",
         "sort-by": "id",
         "format-icons": {
+            "Windows": "W",
             "Gaming": "G",
             "1": "1",
             "2": "2",
