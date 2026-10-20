@@ -16,3 +16,5 @@ pavucontrol.ini
 QtProject.conf
 nvim/pack/
 libreoffice/
+VirtualBox/
+qt5ct/
