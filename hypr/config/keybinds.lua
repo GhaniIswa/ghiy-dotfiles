@@ -42,7 +42,10 @@ for i = 1, 10 do
     hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
 end
 
-hl.bind(mainMod .. " + ESCAPE", hl.dsp.focus({workspace = "Gaming"}))
+hl.bind(mainMod .. " + ESCAPE",                 hl.dsp.focus({workspace = "Gaming"}))
+hl.bind(mainMod .. " + SHIFT + ESCAPE",         hl.dsp.window.move({ workspace = "Gaming"}))
+hl.bind(mainMod .. " + W",                      hl.dsp.focus({workspace = "Windows"}))
+hl.bind(mainMod .. " + SHIFT + W",         hl.dsp.window.move({ workspace = "Windows"}))
 
 -- Scroll through existing workspaces with mainMod + scroll
 
