@@ -40,9 +40,9 @@ hl.animation({
 hl.animation({
     leaf = "windowsIn",
     enabled = true,
-    speed = 3.5,
+    speed = 3,
     bezier = "smoothOut",
-    style = "popin 30%",
+    style = "popin 90%",
 })
 
 hl.animation({
@@ -50,7 +50,7 @@ hl.animation({
     enabled = true,
     speed = 3,
     bezier = "smoothLinear",
-    style = "popin 30%",
+    style = "popin 90%",
 })
 
 hl.animation({
