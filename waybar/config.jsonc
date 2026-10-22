@@ -32,6 +32,7 @@
         "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"e+1\"})' ",
         "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace=\"e-1\"})' ",
         "format": "{icon}",
+        "on-click": "activate",
         "sort-by": "id",
         "format-icons": {
             "Windows": "W",
@@ -101,14 +102,15 @@
         },
         "format": "Battery: {capacity}%",
         "format-full": "",
-        "format-charging": "󱐋 {capacity}%"
+        "format-charging": "",
+        "format-plugged": ""
     },
 
     "custom/nowplaying": {
         "format": " 󰝚  {} ",
         "return-type": "json",
-        "max-length": 25,
-        "exec": "playerctl -a metadata --format '{\"text\": \"{{title}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+        "max-length": 20,
+        "exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous"
