@@ -1,3 +1,30 @@
+[opener]
+edit = [
+    { run = "nvim %s", block = true, for = "unix" }
+]
+
+image = [
+    { run = 'swayimg --fullscreen %s', block = true, for = "unix" }
+]
+
+play = [
+    { run = "mpv --fs %s", for = "unix" }
+]
+
+[open]
+prepend_rules = [
+    { mime = "image/jpeg", use = "image" },
+    { mime = "image/png", use = "image" },
+    { mime = "image/webp", use = "image" },
+    { mime = "image/gif", use = "image" },
+    { mime = "image/avif", use = "image" },
+    { mime = "video/*", use = "play"},
+    { mime = "text/*", use = "edit" },
+    { mime = "application/json", use = "edit" },
+    { mime = "application/x-lua", use = "edit" },
+    { mime = "application/toml", use = "edit" },
+]
+
 [[plugin.prepend_fetchers]]
 url   = "*"
 run   = "git"
