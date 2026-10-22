@@ -1,0 +1,14 @@
+[[mgr.prepend_keymap]]
+on   = [ "g", "z" ]
+run  = 'shell "$SHELL" --block'
+desc = "Open interactive Zsh here"
+
+[[mgr.prepend_keymap]]
+on   = "l"
+run  = "plugin smart-enter"
+desc = "Enter the child directory, or open the file"
+
+[[mgr.prepend_keymap]]
+on   = "<ENTER>"
+run  = "plugin smart-enter"
+desc = "Enter the child directory, or open the file"
