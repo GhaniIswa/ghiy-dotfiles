@@ -11,13 +11,13 @@
 
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/window",
-        "custom/nowplaying"
+        "hyprland/window"
     ],
     "modules-center": [
         "memory"
     ],
     "modules-right": [
+        "custom/nowplaying",
         "tray",
         "network",
         "pulseaudio",
@@ -46,18 +46,18 @@
 
     "hyprland/window": {
         "format": "{title}",
-        "max-length": 40,
+        "max-length": 100,
         "icon": true,
         "icon-size": 18,
         "separate-outputs": true,
-        "tooltip": false,
+        "tooltip": true,
         "rewrite": {
             "": "Arch Linux"
         }
     },
 
     "clock": {
-        "format": "{:%H:%M %p} ",
+        "format": "{:%I:%M %p} ",
         "tooltip": false
     },
     
@@ -114,7 +114,6 @@
         "format": "{icon} {capacity}%",
         "format-full": "",
         "format-charging": "󰂄 {capacity}%",
-        "format-plugged": "󰚥 {capacity}%",
         "format-icons": [
             "󰁺",
             "󰁻",
@@ -132,7 +131,7 @@
     "custom/nowplaying": {
         "format": "󰝚  {} ",
         "return-type": "json",
-        "max-length": 20,
+        "max-length": 100,
         "exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl next",
