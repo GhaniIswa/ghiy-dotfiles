@@ -33,7 +33,7 @@ return {
                     symbols = {
                     added = "",
                     modified = "",
-                    deleted = "✖DDx",
+                    deleted = "✖",
                     renamed = "󰁕",
                     untracked = "?",
                     ignored = "x",
