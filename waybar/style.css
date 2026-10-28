@@ -10,6 +10,7 @@ window#waybar {
     color: #ffffff;
 }
 
+#window,
 #workspaces,
 #workspaces button,
 #clock,
@@ -41,12 +42,14 @@ window#waybar {
     padding: 0px 4px;
 }
 
+#battery:hover,
 #tray > widget:hover,
 #clock:hover,
 #custom-nowplaying:hover,
 #network:hover,
 #pulseaudio:hover,
 #backlight:hover,
+#window:hover,
 #workspaces button:hover,
 #workspaces button.active,
 #workspaces button.focused {
