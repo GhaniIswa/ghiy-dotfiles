@@ -1,6 +1,3 @@
-# Dotfiles for Linux.
-My larping arch linux dotfiles.
-
 ### Includes:
 - waybar
 - fuzzel
@@ -15,5 +12,3 @@ My larping arch linux dotfiles.
 - zsh
 
 remember to add `export ZDOTDIR="$HOME/.config/zsh"` to your `/etc/zsh/zshenv`
-
-Warning! you need to edit monitors.lua beacause it was my monitors setting
