@@ -1,7 +1,8 @@
 {
     "layer": "top",
     "position": "top",
-    "spacing": 2,
+    "spacing": 0,
+    "height": 27,
     "margin-top": 14,
     "margin-left": 300,
     "margin-right": 300,
