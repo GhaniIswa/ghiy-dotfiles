@@ -7,6 +7,9 @@ hl.config({
         border_size = 2,
         extend_border_grab_area = 10,
         resize_on_border = true,
+        col = {
+        active_border = 0xffbd93f9,
+        },
     },
 
     decoration = {
