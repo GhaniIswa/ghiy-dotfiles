@@ -72,6 +72,15 @@ hl.window_rule({
     no_focus = true,
 })
 
+-- Ignore Specific apps animation
+hl.layer_rule({
+    -- no_anim = true,
+    match = {
+    class = "rofi"
+    },
+    animation = "fade"
+})
+
 -- Blur
 hl.layer_rule({
     match = {
