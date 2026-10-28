@@ -16,7 +16,7 @@ zen/
 mimeapps.list
 pavucontrol.ini
 QtProject.conf
-nvim/pack/
+nvim/lazy-lock.json
 libreoffice/
 VirtualBox/
 qt5ct/
