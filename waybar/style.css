@@ -11,8 +11,6 @@ window#waybar {
 }
 
 #window,
-#workspaces,
-#workspaces button,
 #clock,
 #battery,
 #memory,
@@ -39,7 +37,7 @@ window#waybar {
     border: none;
     border-radius: 0;
     color: #ffffff;
-    padding: 0px 4px;
+    padding: 0px 3px;
 }
 
 #battery:hover,
