@@ -114,7 +114,8 @@
         },
         "format": "{icon} {capacity}%",
         "format-full": "",
-        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "",
+        "format-charging": "",
         "format-icons": [
             "󰁺",
             "󰁻",
