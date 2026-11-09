@@ -1,6 +1,6 @@
 ### Includes:
 - waybar
-- fuzzel
+- rofi
 - hyprland
 - nvim
 - kitty
