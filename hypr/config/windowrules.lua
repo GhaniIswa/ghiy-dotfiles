@@ -10,10 +10,20 @@ hl.window_rule({
     pin               = true,
 })
 
--- Gaming
+-- Workspace
 local gamingApps = "^(steam_app.*|gamescope)$"
 local gamingWorkspace = "name:Gaming"
 local windowsWorkspace = "name:Windows"
+
+hl.workspace_rule({
+    workspace = gamingWorkspace,
+    animation = "fade",
+})
+
+hl.workspace_rule({
+    workspace = windowsWorkspace,
+    animation = "fade",
+})
 
 hl.window_rule({ match = { content = "game" }, workspace = gamingWorkspace })
 hl.window_rule({ match = { xdg_tag = "^(.*game.*)$" }, workspace = gamingWorkspace, fullscreen_state = 2, content = "game", sync_fullscreen = true })
@@ -23,7 +33,7 @@ hl.window_rule({ match = { class = "^(steam)$", title = "^(Friends List)$" }, fl
 hl.window_rule({ match = { class = "^(steam)$", title = "^(Launching\\.{3})$" }, float = true, center = true, workspace = gamingWorkspace })
 
 hl.window_rule({ match = { class = "^(Terraria.bin.x86_64|RimWorldLinux|Minecraft.*)$"}, fullscreen = true, float = true, workspace = gamingWorkspace })
-hl.window_rule({ match = { class = "^(VirtualBox Machine)$"}, fullscreen = true, float = true, workspace = windowsWorkspace })
+hl.window_rule({ match = { class = "^(VirtualBox Machine|Vmware)$"}, fullscreen = true, workspace = windowsWorkspace })
 
 -- Opacity Overrides
 local terminals = "^(kitty)$"
