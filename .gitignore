@@ -23,3 +23,6 @@ VirtualBox/
 qt5ct/
 qt6ct/
 hypr/config/monitors.lua
+Meltytech/
+user-dirs.dirs
+user-dirs.locale
