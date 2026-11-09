@@ -72,8 +72,8 @@ hl.animation({ leaf = "fadeLayersOut"       , enabled = true , speed = 7 , bezie
 hl.animation({ leaf = "border"              , enabled = true , speed = 7  , bezier = "easeOutQuint" })
 hl.animation({ leaf = "borderangle"         , enabled = true , speed = 15 , bezier = "easeOutBack" })
 
-hl.animation({ leaf = "workspaces"          , enabled = true , speed = 7 , bezier = "easeOutQuint" , style = "slidefade 10%" })
-hl.animation({ leaf = "workspacesIn"        , enabled = true , speed = 7 , bezier = "easeOutQuint" , style = "slidefade 10%" })
+hl.animation({ leaf = "workspaces"          , enabled = true , speed = 5 , bezier = "easeOutQuint" , style = "slidefade 10%" })
+hl.animation({ leaf = "workspacesIn"        , enabled = true , speed = 5 , bezier = "easeOutQuint" , style = "slidefade 10%" })
 hl.animation({ leaf = "workspacesOut"       , enabled = true , speed = 5 , bezier = "easeOutQuint" , style = "slidefade 10%" })
 hl.animation({ leaf = "specialWorkspace"    , enabled = true , speed = 7 , bezier = "easeOutQuint" , style = "slidefadevert -10%" })
 hl.animation({ leaf = "specialWorkspaceIn"  , enabled = true , speed = 7 , bezier = "easeOutQuint" , style = "slidefadevert -10%" })
