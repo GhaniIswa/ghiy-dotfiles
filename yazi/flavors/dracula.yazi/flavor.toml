@@ -187,14 +187,16 @@ dirs = [
 	{ name = ".npm", text = "", fg = "#bd93f9" },
 	{ name = "Desktop", text = "", fg = "#8be9fd" },
 	{ name = "Development", text = "", fg = "#8be9fd" },
-	{ name = "Documents", text = "", fg = "#8be9fd" },
-	{ name = "Downloads", text = "", fg = "#bd93f9" },
+	{ name = "Documents", text = "", fg = "#bd93f9" },
+	{ name = "Downloads", text = "", fg = "#bd93f9" },
+	{ name = "Games", text = "󰊴", fg = "#bd93f9" },
 	{ name = "Library", text = "", fg = "#8be9fd" },
 	{ name = "Movies", text = "", fg = "#8be9fd" },
 	{ name = "Music", text = "", fg = "#8be9fd" },
-	{ name = "Pictures", text = "", fg = "#bd93f9" },
+	{ name = "Pictures", text = "", fg = "#bd93f9" },
 	{ name = "Public", text = "", fg = "#8be9fd" },
-	{ name = "Videos", text = "", fg = "#8be9fd" },
+	{ name = "Videos", text = "", fg = "#bd93f9" },
+  { name = "VM", text= "󰢹", fg = "#bd93f9"}
 ]
 conds = [
 	# Special files
