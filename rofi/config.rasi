@@ -3,6 +3,7 @@ configuration {
     font:                       "Inter 12";
     sort:                       false;
     disable-history:            true;
+    drun-display-format:        "{name}";
 }
 
 * {
@@ -10,20 +11,19 @@ configuration {
     bg-selected:                #19191980;
     fg:                         #C4C4C4ff;
     transparent:                transparent;
-    separatorcolor:		        transparent;
+    separatorcolor:		          transparent;
 }
 
 window {
     transparency:               "real";
     location:                   center;
     anchor:                     center;
-    width:                      600px;
+    width:                      450px;
     x-offset:                   0px;
     y-offset:                   0px;
-    
     background-color:           @bg-main;
-    border:                     0px;
-    border-color:               #89b4fa80;
+    border:                     2px;
+    border-color:               #bd93f980;
     border-radius:              12px;
     padding:                    15px;
 }
@@ -41,8 +41,11 @@ inputbar {
 
 entry {
     background-color:           #20202080;
+    cursor:                     text;
+    cursor-color:               #bd93f980;
+    cursor-width:               2px;
     text-color:                 @fg;
-    placeholder:                "Search...";
+    placeholder:                "Who need search anyway...";
     placeholder-color:          #c4c4c480;
     padding:                    10px 15px;
     border-radius:              8px;
@@ -56,7 +59,7 @@ listview {
     cycle:                      true;
     dynamic:                    true;
     scrollbar:                  false;
-    separator-style: 		"none";
+    separator-style: 		        "none";
 }
 
 element {
@@ -80,6 +83,9 @@ element alternate.normal {
 element selected.normal {
     background-color:           @bg-selected;
     text-color:                 #C4C4C4;
+    border:                     2px;
+    border-color:               #bd93f980;
+    border-radius:              6px;
 }
 
 element-text {
