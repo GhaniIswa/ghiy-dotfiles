@@ -8,9 +8,9 @@ hl.config({
 
 hl.on("hyprland.start", function ()
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
-    hl.exec_cmd("dbus-update-activation-environment --systemd --all")
+    hl.exec_cmd("sleep 1.5 && dbus-update-activation-environment --systemd --all")
     hl.exec_cmd("waybar")
+    hl.exec_cmd("mako")
     hl.exec_cmd("awww-daemon & sleep 0.3 && awww img /home/ghani/Pictures/Wallpapers/me.png")
-    hl.exec_cmd("sleep 1 && hyprctl eval 'hl.config({ animations = { enabled = true } })'")
     hl.exec_cmd("wl-clip-persist --clipboard regular")
   end)
