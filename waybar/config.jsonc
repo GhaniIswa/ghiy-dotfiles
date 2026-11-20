@@ -59,15 +59,17 @@
 
     "clock": {
         "format": "{:%I:%M %p} ",
-        "tooltip": false
+        "tooltip": true
     },
     
     "memory": {
         "format": "󰍛  {used:0.1f} GB / {total:0.1f} GB",
+        "on-click": "kitty -e btop",
         "tooltip": false
     },
 
     "network": {
+        "format": "󰤮",
         "format-wifi": "{icon}",
         "format-icons": [
             "󰤯",
@@ -76,6 +78,9 @@
             "󰤥",
             "󰤨"
         ],
+        "format-disconnected": "󰤮",
+        "format-disabled": "󰤮",
+        "on-click": "kitty --class impala -e impala",
         "tooltip": true,
         "tooltip-format": "connected to {essid}"
     },
@@ -101,7 +106,7 @@
             "car": "󰆋",
             "default": ["󰕿 ", "󰖀 ", "󰕾 "]
         },
-        "on-click": "pavucontrol",
+        "on-click": "kitty --class wiremix -e wiremix",
         "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+",
         "on-scroll-down": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-",
         "tooltip": false
@@ -116,6 +121,7 @@
         "format-full": "",
         "format-plugged": "",
         "format-charging": "",
+        "format-not-charging": "",
         "format-icons": [
             "󰁺",
             "󰁻",
