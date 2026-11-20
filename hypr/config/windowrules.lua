@@ -11,7 +11,6 @@ hl.window_rule({
 })
 
 -- Workspace
-local gamingApps = "^(steam_app.*|gamescope)$"
 local gamingWorkspace = "name:Gaming"
 local windowsWorkspace = "name:Windows"
 
@@ -25,14 +24,13 @@ hl.workspace_rule({
   animation = "fade",
 })
 
-hl.window_rule({ match = { content = "game" }, workspace = gamingWorkspace })
-hl.window_rule({ match = { xdg_tag = "^(.*game.*)$" }, workspace = gamingWorkspace, fullscreen_state = 2, content = "game", sync_fullscreen = true })
-hl.window_rule({ match = { class = gamingApps }, workspace = gamingWorkspace })
-hl.window_rule({ match = { class = "^(steam)$"}, center = true, workspace = gamingWorkspace })
+hl.window_rule({ match = { class = "^(steam)$"}, center = true })
 hl.window_rule({ match = { class = "^(steam)$", title = "^(Friends List)$" }, float = true })
 hl.window_rule({ match = { class = "^(steam)$", title = "^(Launching\\.{3})$" }, float = true, center = true, workspace = gamingWorkspace })
+hl.window_rule({ match = { class = "^(steam_app.*)$"}, fullscreen = true, workspace = gamingWorkspace })
 
-hl.window_rule({ match = { class = "^(Terraria.bin.x86_64|RimWorldLinux|Minecraft.*)$"}, fullscreen = true, float = true, workspace = gamingWorkspace })
+hl.window_rule({ match = { title = "^(Skyrim Special Edition)$"}, fullscreen = true })
+hl.window_rule({ match = { class = "^(Terraria.bin.x86_64|RimWorldLinux|Minecraft.*|com.mojang.minecraft)$", title = "^(Minecraft.*)" }, fullscreen = true, workspace = gamingWorkspace })
 hl.window_rule({ match = { class = "^(VirtualBox Machine|Vmware)$"}, fullscreen = true, workspace = windowsWorkspace })
 
 -- Steam Dropdown Menu Workaround
@@ -63,7 +61,6 @@ hl.window_rule({
   match     = { class = "^(org.prismlauncher.PrismLauncher)$"},
   float     = true,
   size      = { 1000, 800 },
-  workspace = gamingWorkspace
 })
 
 hl.window_rule({
@@ -73,7 +70,6 @@ hl.window_rule({
   },
   float     = true,
   size      = { 800, 600 },
-  workspace = gamingWorkspace
 })
 
 hl.window_rule({
@@ -83,7 +79,6 @@ hl.window_rule({
   },
   float     = true,
   size      = { 250, 150 },
-  workspace = gamingWorkspace
 })
 
 hl.window_rule({
@@ -99,6 +94,9 @@ local terminals = "^(kitty)$"
 
 hl.window_rule({ match = { class = terminals }, opacity = "1.0 override" })
 hl.window_rule({ match = { class = "^(mpv)$" }, opacity = "1.0 override" })
+
+-- Float for tui from waybar
+hl.window_rule({ match = { class = "^(impala|wiremix|calcurse|music)$"}, float = true, size = { 630, 550 } })
 
 -- Float Common Modals
 local modalMatches = {
@@ -145,7 +143,7 @@ hl.layer_rule({
 -- Blur
 hl.layer_rule({
   match = {
-    namespace = "launcher|rofi|waybar"
+    namespace = "launcher|rofi|waybar|notifications"
   },
   blur = true,
   ignore_alpha = 0.5,
