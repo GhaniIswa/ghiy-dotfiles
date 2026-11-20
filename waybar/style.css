@@ -18,6 +18,7 @@ window#waybar {
 #network,
 #pulseaudio,
 #custom-nowplaying,
+#power-profiles-daemon,
 #tray,
 #tray > widget {
     background-color: transparent;
@@ -50,6 +51,7 @@ box:hover > #custom-nowplaying,
 #network:hover,
 #pulseaudio:hover,
 #backlight:hover,
+#power-profiles-daemon:hover,
 #window:hover,
 #workspaces button:hover,
 #workspaces button.active,
