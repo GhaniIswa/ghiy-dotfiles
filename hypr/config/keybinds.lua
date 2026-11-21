@@ -9,6 +9,9 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("rofi -show drun")) 
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo()) 
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("kitty -e yazi"))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("kitty --class impala -e impala"))
+hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd("kitty --class wiremix -e wiremix"))
 
 -- Window Focus, Position, Size --
 
@@ -44,8 +47,8 @@ end
 
 hl.bind(mainMod .. " + ESCAPE",                 hl.dsp.focus({workspace = "Gaming"}))
 hl.bind(mainMod .. " + SHIFT + ESCAPE",         hl.dsp.window.move({ workspace = "Gaming"}))
-hl.bind(mainMod .. " + W",                      hl.dsp.focus({workspace = "Windows"}))
-hl.bind(mainMod .. " + SHIFT + W",         hl.dsp.window.move({ workspace = "Windows"}))
+-- hl.bind(mainMod .. " + W",                      hl.dsp.focus({workspace = "Windows"}))
+-- hl.bind(mainMod .. " + SHIFT + W",         hl.dsp.window.move({ workspace = "Windows"}))
 
 -- Scroll through existing workspaces with mainMod + scroll
 
